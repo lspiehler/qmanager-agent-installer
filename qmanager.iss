@@ -190,8 +190,8 @@ begin
     // Exec('sc.exe', 'delete ' + svcName, '', SW_HIDE, ewWaitUntilTerminated, resultCode);
 
     // debug sc command args
-    if not SuppressMsgBoxes then
-      MsgBox(Format('sc create "%s" binPath= "%s" start= auto', [svcName, binPath]), mbError, MB_OK);
+    // if not SuppressMsgBoxes then
+      // MsgBox(Format('sc create "%s" binPath= "%s" start= auto', [svcName, binPath]), mbError, MB_OK);
 
     // Create the service
     Exec('sc.exe', Format('create "%s" binPath= "%s" start= auto', [svcName, binPath]), '', SW_HIDE, ewWaitUntilTerminated, resultCode);
